@@ -1,0 +1,35 @@
+{
+  "name": "i-ching",
+  "version": "1.0.0",
+  "description": "El libro del cambio",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "aperricio",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "23.1.3",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.aperricio.iching",
+    "linux": {
+      "icon": "img/yinyan.png"
+    },
+    "files": [
+      "main.js",
+      "i-ching.html",
+      "js/iching.min.js",
+      "js/jquery.min.js",
+      "css/iching.css",
+      "fonts/DancingScript-VariableFont_wght.ttf",
+      "img/*"
+    ],
+    "directories": {
+      "output": "dist"
+    }
+  }
+}
