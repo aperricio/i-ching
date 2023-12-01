@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/yinyan.png" type="image/x-icon">
+    <title>I Ching, el libro del cambio</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/iching.min.js"></script>
+    <link rel="stylesheet" href="css/iching.css">
+</head>
+<body>
+    <h1>I Ching</h1>
+    <div id="instrucciones">
+        <p>Bienvenido al I-Ching, el libro del cambio. Estás ante un oráculo capaz de ayudarte a tomar decisiones, y para ello sólo tienes que seguir unas sencillas instrucciones. Aunque hay más opciones, aquí vamos a usar el método de las monedas, y hay que tirar tres monedas seis veces para conseguir formar los hexagramas. Tres seises o tres nueves formarán una línea móvil, lo que dará acceso a una resolución o un hexagrama futuro. En esta página está todo el proceso automatizado: clic/tocar en el botón "Tirar monedas" para simular el lanzamiento, y en "Ver resultado" para ver qué nos dice el oráculo. <br><br>
+        También se puede introducir un número a mano, para lo que hay que tocar en la casilla que hay al lado de la posición de la línea y poner números del 6 al 9.</p>
+    </div>
+    <section id="botones2">
+        <input id="verInstrucciones" class="botones" type="button" value="INSTRUCCIONES"> <input id="verHexagramas" class="botones" type="button" value="HEXAGRAMAS">
+    </section>
+    <table id="hexagramas">
+        <tr>
+            <td id="hexagrama1">
+                <div>
+                    1
+                    <section class="miniHexagrama">
+                            <div class="miniContinua"></div>
+                            <div class="miniContinua"></div>
+                            <div class="miniContinua"></div>
+                            <div class="miniContinua"></div>
+                            <div class="miniContinua"></div>
+                            <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama2">
+                <div>
+                    2
+                    <section class="miniHexagrama">
+                            <div class="miniDiscontinua"></div>
+                            <div class="miniDiscontinua"></div>
+                            <div class="miniDiscontinua"></div>
+                            <div class="miniDiscontinua"></div>
+                            <div class="miniDiscontinua"></div>
+                            <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama3">
+                <div>
+                    3
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama4">
+                <div>
+                    4
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama5">
+                <div>
+                    5
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama6">
+                <div>
+                    6
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama7">
+                <div>
+                    7
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama8">
+                <div>
+                    8
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="hexagrama9">
+                <div>
+                    9 <section class="miniHexagrama">
+                            <div class="miniContinua"></div>
+                            <div class="miniContinua"></div>
+                            <div class="miniDiscontinua"></div>
+                            <div class="miniContinua"></div>
+                            <div class="miniContinua"></div>
+                            <div class="miniContinua"></div>
+                      </section>
+                </div>
+            </td>
+            <td id="hexagrama10">
+                <div>
+                    10
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama11">
+                <div>
+                    11
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                  </section>
+                </div>
+            </td>
+            <td id="hexagrama12">
+                <div>
+                    12
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama13">
+                <div>
+                    13
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama14">
+                <div>
+                    14
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama15">
+                <div>
+                    15
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama16">
+                <div>
+                    16
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="hexagrama17">
+                <div>
+                    17
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama18">
+                <div>
+                    18
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama19">
+                <div>
+                    19
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama20">
+                <div>
+                    20
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama21">
+                <div>
+                    21
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama22">
+                <div>
+                    22
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama23">
+                <div>
+                    23
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama24">
+                <div>
+                    24
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="hexagrama25">
+                <div>
+                    25
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama26">
+                <div>
+                    26
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama27">
+                <div>
+                    27
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama28">
+                <div>
+                    28
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama29">
+                <div>
+                    29
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama30">
+                <div>
+                    30
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama31">
+                <div>
+                    31
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama32">
+                <div>
+                    32
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="hexagrama33">
+                <div>
+                    33
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama34">
+                <div>
+                    34
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama35">
+                <div>
+                    35
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama36">
+                <div>
+                    36
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama37">
+                <div>
+                    37
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama38">
+                <div>
+                    38
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama39">
+                <div>
+                    39
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama40">
+                <div>
+                    40
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="hexagrama41">
+                <div>
+                    41
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama42">
+                <div>
+                    42
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama43">
+                <div>
+                    43
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama44">
+                <div>
+                    44
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama45">
+                <div>
+                    45
+                        <section class="miniHexagrama">
+                            <div class="miniDiscontinua"></div>
+                            <div class="miniContinua"></div>
+                            <div class="miniContinua"></div>
+                            <div class="miniDiscontinua"></div>
+                            <div class="miniDiscontinua"></div>
+                            <div class="miniDiscontinua"></div>
+                        </section>
+                </div>
+            </td>
+            <td id="hexagrama46">
+                <div>
+                    46
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama47">
+                <div>
+                    47
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama48">
+                <div>
+                    48
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="hexagrama49">
+                <div>
+                    49
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama50">
+                <div>
+                    50
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama51">
+                <div>
+                    51
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama52">
+                <div>
+                    52
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama53">
+                <div>
+                    53
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama54">
+                <div>
+                    54
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama55">
+                <div>
+                    55
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama56">
+                <div>
+                    56
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td id="hexagrama57">
+                <div>
+                    57
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama58">
+                <div>
+                    58
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama59">
+                <div>
+                    59
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama60">
+                <div>
+                    60
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama61">
+                <div>
+                    61
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama62">
+                <div>
+                    62
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama63">
+                <div>
+                    63
+                    <section class="miniHexagrama">
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                    </section>
+                </div>
+            </td>
+            <td id="hexagrama64">
+                <div>
+                    64
+                    <section class="miniHexagrama">
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                        <div class="miniContinua"></div>
+                        <div class="miniDiscontinua"></div>
+                    </section>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <section id="lineas">
+        <table>
+            <caption><h2>Líneas</h2></caption>
+            <tr>
+                <td>Sexta</td>
+                <td><input id="numero6" class="numeros" type="number" value=""></td>
+            </tr>
+            <tr>
+                <td>Quinta</td>
+                <td><input id="numero5" class="numeros" type="number" value=""></td>
+            </tr>
+            <tr>
+                <td>Cuarta</td>
+                <td><input id="numero4" class="numeros" type="number" value=""></td>
+            </tr>
+            <tr>
+                <td>Tercera</td>
+                <td><input id="numero3" class="numeros" type="number" value=""></td>
+            </tr>
+            <tr>
+                <td>Segunda</td>
+                <td><input id="numero2" class="numeros" type="number" value=""></td>
+            </tr>
+            <tr>
+                <td>Primera</td>
+                <td><input id="numero1" class="numeros" type="number" value=""></td>
+            </tr>
+        </table>
+    </section>
+    <section id="botones">
+        <input id="echar" class="botones" type="button" value="TIRAR MONEDAS"> <input id="ver" class="botones" type="button" value="TIRADA MANUAL">
+    </section>
+    <main id="resolucion">
+        <h2><span id="resolucion3">Resolución</span><span id="futuro">Futuro</span>: <br><span id="resolucion2"></span></h2>
+        <section id="hexagrama">
+            <div id="linea6"></div><div id="punto6" class="punto"></div><br>
+            <div id="linea5"></div><div id="punto5" class="punto"></div><br>
+            <div id="linea4"></div><div id="punto4" class="punto"></div><br>
+            <div id="linea3"></div><div id="punto3" class="punto"></div><br>
+            <div id="linea2"></div><div id="punto2" class="punto"></div><br>
+            <div id="linea1"></div><div id="punto1" class="punto"></div><br>
+        </section>
+        <section>
+            <article>
+                <h3>El juicio</h3>
+                <p id="juicio"></p>
+            </article>
+            <article>
+                <h3>Imagen</h3>
+                <img id="foto" src="" alt="">
+                <p id="imagen"></p>
+            </article>
+            <article>
+                <h3 id="lineasMoviles">Líneas móviles</h3>
+                <div id="movil1" class="movil"></div>
+                <div id="movil2" class="movil"></div>
+                <div id="movil3" class="movil"></div>
+                <div id="movil4" class="movil"></div>
+                <div id="movil5" class="movil"></div>
+                <div id="movil6" class="movil"></div>
+                <div id="extra" class="movil"></div>
+                <div id="btnFuturo"><a href="#resolucion"><input type="button" id="verFuturo" class="botones" value="FUTURO" title="Se eliminará la resolución actual"></a></div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
