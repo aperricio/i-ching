@@ -8,3 +8,8 @@
 
 <img src="capturas/captura-resolucion.png">
 
+<h2>Por hacer</h2>
+<ul>
+  <li>Sustituir imágenes por unas generadas por IA. El generador de imágenes de Bing es el que mejor resultados da, así que será la IA elegida.</li>
+</ul>
+
