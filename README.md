@@ -14,4 +14,5 @@
 </ul>
 
 <p style="text-align:right">Textos: Universidad de Princeton, traducidos por Brian Arnold.</p>
+<style>p {text-align:right}</style>
 
