@@ -6,7 +6,7 @@
 
 <img src="capturas/captura-hexagramas.png">
 
-<img src="capturas/captura-resolucion.png">
+<img src="capturas/captura-la-fuerza-creativa.png">
 
 <h2>Por hacer</h2>
 <ul>
