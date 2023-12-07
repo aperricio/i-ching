@@ -10,7 +10,7 @@
 
 <h2>Por hacer</h2>
 <ul>
-  <li>Sustituir imágenes por unas generadas por IA. El generador de imágenes de Bing es el que mejor resultados da, así que será la IA elegida.</li>
+  <li>Imágenes generadas por IA ("Designer" de Bing -lo que mejores resultados ofreció-).</li>
 </ul>
 
 <p>Textos: Universidad de Princeton (Hellmut Wilhelm).</p>
