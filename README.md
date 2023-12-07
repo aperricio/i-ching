@@ -13,5 +13,5 @@
   <li>Sustituir imágenes por unas generadas por IA. El generador de imágenes de Bing es el que mejor resultados da, así que será la IA elegida.</li>
 </ul>
 
-<p style="text-align:right !important">Textos: Universidad de Princeton, traducidos por Brian Arnold.</p>
+<p>Textos: Universidad de Princeton, traducidos por Brian Arnold.</p>
 
