@@ -5,7 +5,7 @@
 <h2>Características</h2>
 
 <ul>
-  <l>Posibilidad de tirar las monedas automáticamente o manual.</li>
+  <li>Posibilidad de tirar las monedas automáticamente o manual.</li>
   <li>Sección con hexagramas.</li>
   <li>Hexagrama complementario y textos más explicativos si hay líneas móviles.</li>
   <li>Imágenes generadas por IA ("Designer" de Bing -lo que mejores resultados ofreció-).</li>
