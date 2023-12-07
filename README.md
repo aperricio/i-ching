@@ -13,5 +13,5 @@
   <li>Imágenes generadas por IA ("Designer" de Bing -lo que mejores resultados ofreció-).</li>
 </ul>
 
-<p>Textos: Universidad de Princeton (Hellmut Wilhelm).</p>
+<p>Texto © 1950, 1967, renovado en 1977 por la Princeton University Press</p>
 
