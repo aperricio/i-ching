@@ -1,4 +1,4 @@
-# I Ching, el libro del cambio en Electron
+# I Ching, el libro del cambio
 Esto es el I Ching, el libro del cambio. Para el que no lo conozca, es como una especie de tarot chino, y puede servir para ayudar a tomar decisiones e incluso "adivinar el futuro".
 
 ## Características
