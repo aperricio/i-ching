@@ -1,329 +1,351 @@
 html {
-            scroll-behavior: smooth;
-        }
+    scroll-behavior: smooth;
+}
 
-        body {
-            background-color: rgb(255, 255, 200);
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            transition: all 1s ease-in-out;
-        }
+body {
+    background-color: rgb(255, 255, 200);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease-in-out;
+}
 
-        @font-face {
-            font-family: Dancing Script;
-            src: url("../fonts/DancingScript-VariableFont_wght.ttf") format("woff2");
-            font-weight: 100, 600;
-        }
-        
 
-        body, input[type=number] {
-                font-family: 'Dancing Script', cursive;
-                font-size: 1.2rem;
-            }
+body, input[type=number] {
+    font-family: 'Wonton', cursive;
+    font-size: 1.2rem;
+}
 
-        main {
-            margin-bottom: 50px;
-        }
-        
-        h1, h2, h3 {
-            text-align: center;
-        }
+main {
+    margin-bottom: 50px;
+}
 
-        h4 {
-            padding: 0 30px;
-            margin-bottom: -8px;
-        }
+h1, h2, h3 {
+    text-align: center;
+}
 
-        h4::after {
-            content: ":";
-        }
+h4 {
+    padding: 0 30px;
+    margin-bottom: -8px;
+}
 
-        @media (min-width: 876px) {
-            h4 {
-                text-align: center;
-            }
-        }
+h4::after {
+    content: ":";
+}
 
-        p {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 10px 30px;
-        }
+@media (min-width: 876px) {
+    h4 {
+        text-align: center;
+    }
+}
 
-        table {
-            margin: 20px;
-            border-collapse: collapse;
-        }
+p {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 30px;
+}
 
-        input[type*="number"] {
-            width: 12px;
-            text-align: center;
-            border: 3px #00b000 double;
-            border-radius: 5px;
-            padding: 3px;
-            background-color: rgba(255, 255, 200, 0);
-        }
+table {
+    margin: 20px;
+    border-collapse: collapse;
+}
 
-        input[type*="button"] {
-            background-color: green;
-             /*-webkit-appearance: button;*/
-            font: inherit;
-            font-weight: bold;
-            font-size: 1rem;
-            border: none;
-            color: white;
-            border-radius: 10px;
-            transition-property: box-shadow, color, background-color;
-            transition-duration: .2s, .5s, .3s;
-        }
+input[type*="number"] {
+    width: 12px;
+    text-align: center;
+    border: 3px #00b000 double;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: rgba(255, 255, 200, 0);
+}
 
-        input[type*="button"]:hover {
-            background-color: rgb(37, 179, 37);
-            border: none;
-            color: yellow;
-            border-radius: 10px;
-            box-shadow: 1px 1px 3px black, -1px -1px 3px grey, -1px 1px 3px black, 1px -1px 3px grey;
-        }
+input[type*="button"] {
+    background-color: green;
+        /*-webkit-appearance: button;*/
+    font: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    transition-property: box-shadow, color, background-color;
+    transition-duration: .2s, .5s, .3s;
+}
 
-        input[type*="button"]:active {
-            background-color: red;
-            color: pink;
-        }
+@media (max-width:400px){
+    input[type*="button"] {
+        transform: scale(0.8);
+    }
+}
 
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-            display: none;
-        }
+input[type*="button"]:hover {
+    background-color: rgb(37, 179, 37);
+    border: none;
+    color: yellow;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black, -1px -1px 3px grey, -1px 1px 3px black, 1px -1px 3px grey;
+}
 
-        #lineas, #botones, #btnFuturo, #botones2 {
-            display: flex;
-            justify-content: center;
-        }
+input[type*="button"]:active {
+    background-color: red;
+    color: pink;
+}
 
-        .botones {
-            margin: 20px 10px;
-            padding: 20px;
-        }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
 
-        .botones:focus {
-            outline: none;
-        }
+#lineas, #botones, #btnFuturo, #botones2 {
+    display: flex;
+    justify-content: center;
+}
 
-        #resolucion, #lineasMoviles, #futuro {
-            display: none;
-        }
+.botones {
+    margin: 20px 10px;
+    padding: 20px;
+}
 
-        #hexagrama {
-            width: 150px;
-            margin: 0 auto;
-            position: relative;
-            left: 8px;
-            margin-bottom: 100px;
-        }
+#resolucion, #lineasMoviles, #futuro {
+    display: none;
+}
 
-        .lineaContinua {
-            display: inline-block;
-            background-color: black;
-            height: 8px;
-            width: 137px;
-            border-radius: 5px;
-            margin-top: -5px;
-        }
+#hexagrama {
+    width: 150px;
+    margin: 0 auto;
+    position: relative;
+    left: 8px;
+    margin-bottom: 100px;
+}
 
-        .lineaDiscontinua{
-            display: inline-block;
-            background-color: black;
-            height: 8px;
-            width: 137px;
-            border-radius: 5px;
-            margin-top: -5px;
-            clip-path: polygon(0% 0%, 35% 0%, 35% 100%, 0% 100%, 0% 0%, 65% 0%, 65% 100%, 100% 100%, 100% 0%);
-        } 
+.lineaContinua {
+    display: inline-block;
+    background-color: black;
+    height: 8px;
+    width: 137px;
+    border-radius: 5px;
+    margin-top: -5px;
+}
 
-        .miniContinua {
-            background-color: black;
-            height: 1px;
-            width: 18px;
-            border-radius: 1px;
-            margin-top: 2px;
-        }
+.lineaDiscontinua{
+    display: inline-block;
+    background-color: black;
+    height: 8px;
+    width: 137px;
+    border-radius: 5px;
+    margin-top: -5px;
+    clip-path: polygon(0% 0%, 35% 0%, 35% 100%, 0% 100%, 0% 0%, 65% 0%, 65% 100%, 100% 100%, 100% 0%);
+} 
 
-        .miniDiscontinua{
-            background-color: black;
-            height: 1px;
-            width: 18px;
-            border-radius: 1px;
-            margin-top: 2px;
-            clip-path: polygon(0% 0%, 35% 0%, 35% 100%, 0% 100%, 0% 0%, 65% 0%, 65% 100%, 100% 100%, 100% 0%);
-        } 
+.miniContinua {
+    background-color: black;
+    height: 1px;
+    width: 18px;
+    border-radius: 1px;
+    margin-top: 2px;
+}
 
-        .miniHexagrama {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            left: 25px;
-            top: -21.5px;
-            margin-right: 5px;
-        }
+.miniDiscontinua{
+    background-color: black;
+    height: 1px;
+    width: 18px;
+    border-radius: 1px;
+    margin-top: 2px;
+    clip-path: polygon(0% 0%, 35% 0%, 35% 100%, 0% 100%, 0% 0%, 65% 0%, 65% 100%, 100% 100%, 100% 0%);
+} 
 
-        .punto {
-            background-color: black;
-            height: 8px;
-            width: 8px;
-            margin-left: 5px;
-            border-radius: 5px;
-            display: none;
-        }
+.miniHexagrama {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 25px;
+    top: -21.5px;
+    margin-right: 5px;
+}
 
-         /* Barra del deslizador */
-         ::-webkit-scrollbar {
-            width: 0px;
-        }
-        
-        #hexagramas {
-            margin: 0 auto;
-            font-size: 1.2em;
-        }
+.punto {
+    background-color: black;
+    height: 8px;
+    width: 8px;
+    margin-left: 5px;
+    border-radius: 5px;
+    display: none;
+}
 
-        @media (max-width: 420px) {
-            .miniHexagrama {
-                left: 20px;
-                top: -19px
-            }
+    /* Barra del deslizador */
+    ::-webkit-scrollbar {
+    width: 0px;
+}
 
-            p {
-                padding: 10px 0;
-                margin: 0;
-            }
+#hexagramas {
+    margin: 0 auto;
+    font-size: 1.2em;
+}
 
-            h4 {
-                padding: 0;
-            }
+@media (max-width: 420px) {
+    .miniHexagrama {
+        left: 20px;
+        top: -19px
+    }
 
-            td > div {
-                font-size: 0.9rem;
-            }
-        }
+    p {
+        padding: 10px 0;
+        margin: 0;
+    }
 
-        @media (max-width: 350px) {
-            .miniHexagrama {
-                left: 15px;
-                top: -19px
-            }
+    h4 {
+        padding: 0;
+    }
 
-            td > div {
-                font-size: 0.8rem;
-            }
-        }
+    td > div {
+        font-size: 0.9rem;
+    }
+}
 
-        #hexagramas td {
-            width: 45px;
-            border: 1px solid grey;
-            padding: 2px;
-            transition: .3s;
-            padding: 5px;
-        }
+@media (max-width: 350px) {
+    .miniHexagrama {
+        left: 15px;
+        top: -19px
+    }
 
-        #hexagramas td:hover{
-            background-color: rgb(181, 255, 255);
-        }
+    td > div {
+        font-size: 0.8rem;
+    }
+}
 
-        td > div {
-            position: relative;
-            top: 8px
-        }
+#hexagramas td {
+    width: 45px;
+    border: 1px solid grey;
+    padding: 2px;
+    transition: .3s;
+    padding: 5px;
+}
 
-        #hexagramas {
-            display: none;
-            justify-content: center;
-        }
+#hexagramas td:hover{
+    background-color: rgb(181, 255, 255);
+}
 
-        #instrucciones {
-            display: none;
-            position: fixed;
-            top: 20px;
-            background-color: white;
-            border-radius: 30px;
-            width: 450px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            box-shadow: 5px 5px 15px grey;
-            z-index: 1;
-        }
+td > div {
+    position: relative;
+    top: 8px
+}
 
-        @media (max-width: 450px) {
-            #instrucciones {
-                position: absolute;
-                width: 300px;
-            }
-        }
+#hexagramas {
+    display: none;
+    justify-content: center;
+}
 
-        #instrucciones p {
-            padding: 30px;
-        }
+#instrucciones {
+    display: none;
+    position: fixed;
+    top: 20px;
+    background-color: white;
+    border-radius: 30px;
+    width: 450px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 5px 5px 15px grey;
+    z-index: 1;
+}
 
-        img {
-            display: flex;
-            max-width: 400px;
-            margin: 0 auto;
-            border-radius: 30px;
-        }
+@media (max-width: 450px) {
+    #instrucciones {
+        position: absolute;
+        width: 300px;
+    }
+}
 
-        @media (max-width: 420px) {
-            img {
-                width: 95%;
-            }
-        }
+#instrucciones p {
+    padding: 30px;
+}
 
-        @media (min-width: 800px) {
-            h1 {
-                font-size: 6rem
-            }
+img {
+    display: flex;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 30px;
+}
 
-            h2 {
-                font-size: 5rem;
-            }
+@media (max-width: 420px) {
+    img {
+        width: 95%;
+    }
+}
 
-            h3 {
-                font-size: 4rem;
-            }
+@media (min-width: 700px) {
+    h1 {
+        font-size: 5rem
+    }
 
-            h4 {
-                font-size: 3rem;
-            }
+    h2 {
+        font-size: 4rem;
+    }
 
-            p {
-                font-size: 2rem;
-            }
+    h3 {
+        font-size: 3.5rem;
+    }
 
-            #instrucciones p {
-                font-size: 1.3rem;
-            }
+    h4 {
+        font-size: 2.5rem;
+    }
 
-            #hexagrama {
-                transform: scale(1.5);
-            }
+    p:not(#instrucciones p) {
+        font-size: 1.8rem;
+    }
 
-            #foto {
-                transform: scale(1.5);
-                margin-top: 120px;
-            }
+    #instrucciones p {
+        font-size: 1rem;
+    }
+}
 
-            #imagen {
-                margin-top: 150px;
-            }
+@media (min-width: 1000px) {
+    h1 {
+        font-size: 6rem
+    }
 
-            table h2 {
-                margin-bottom: 5px
-            }
+    h2 {
+        font-size: 5rem;
+    }
 
-            tr {
-                font-size: 1.5rem;
-            }
+    h3 {
+        font-size: 4rem;
+    }
 
-            #hexagramas div {
-                font-size: 1.2rem;
-            }
-        }
+    h4 {
+        font-size: 3rem;
+    }
+
+    p:not(#instrucciones p) {
+        font-size: 2rem;
+    }
+
+    #instrucciones p {
+        font-size: 1.3rem;
+    }
+
+    #hexagrama {
+        transform: scale(1.5);
+    }
+
+    #foto {
+        transform: scale(1.5);
+        margin-top: 120px;
+    }
+
+    #imagen {
+        margin-top: 150px;
+    }
+
+    table h2 {
+        margin-bottom: 5px
+    }
+
+    tr {
+        font-size: 1.5rem;
+    }
+
+    #hexagramas div {
+        font-size: 1.2rem;
+    }
+}
