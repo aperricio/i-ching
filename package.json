@@ -1,6 +1,6 @@
 {
   "name": "i-ching",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "El libro del cambio",
   "main": "main.js",
   "scripts": {
@@ -25,7 +25,7 @@
       "js/iching.min.js",
       "js/jquery.min.js",
       "css/iching.css",
-      "fonts/DancingScript-VariableFont_wght.ttf",
+      "fonts/Wonton.ttf",
       "img/*"
     ],
     "directories": {
