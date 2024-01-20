@@ -1,0 +1,49 @@
+{
+  "name": "i-ching",
+  "version": "1.0.1",
+  "description": "El libro del cambio",
+  "main": "main.js",
+  "homepage": "https://github.com/aperricio/i-ching",
+  "scripts": {
+    "deb": "electron-builder --linux deb"
+  },
+  "author": {
+    "name": "aperricio",
+    "email": "aperricio2@gmail.com"
+  },
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "electron": "^28.1.4",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "com.aperricio.iching",
+    "linux": {
+      "icon": "img/yinyan.png", 
+      "target": ["deb"],
+      "desktop": {
+        "Name": "I Ching",
+        "Terminal": "false",
+        "Type": "Application",
+        "Icon": "img/yinyan.png",
+        "StartupWMClass": "i-ching",
+        "Category": "Application",
+        "Comment": "El libro del cambio",
+        "Categories": "Utility"
+      }
+    },
+    "files": [
+      "main.js",
+      "i-ching.html",
+      "js/iching.min.js",
+      "js/jquery.min.js",
+      "css/iching.css",
+      "fonts/Wonton.ttf",
+      "img/*",
+      "i-ching.desktop" 
+    ],
+    "directories": {
+      "output": "dist"
+    }
+  }
+}
